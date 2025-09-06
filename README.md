@@ -24,7 +24,7 @@ It uses the [TheMealDB API](https://www.themealdb.com/) to fetch meals by name a
 ---
 
 ## 📸 Preview
-![App Screenshot](.shot.png.png)
+![App Screenshot](./shot.png)
 
 
 ---

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cook.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to cook.com</h1>
+      <section id="main-content">
+        <div id="wrapper">
+            
+            <!-- search area in the main content -->
+            <div id="search">
+              <form>
+                  <i id="search-icon" class="fas fa-search"></i>
+                <input id="input" type="text" placeholder="What to cook/bake?" />
+              </form>
+            </div>
+
+
+            <!-- result area in the main content -->
+             <!-- will be initially hidden and is triggered by the search -->
+            <div class="result hidden" id="result">
+                <h3><b>Here is your recipe for...</b></h3>
+                <p id="dish-name" ></p>
+                <img id="dish-image"  src="" alt="" width="">
+
+                <!-- Category -->
+                <div class="cat">
+                    <h3><b>Category:</b></h3>
+                    <p id="category"></p>
+                </div>
+
+                <!-- Instructions -->
+                <h3><b>Instructions </b></h3>
+                <p id="instructions">
+
+                </p>
+            </div>
+        </div>
+      </section>
+    </main>
+   </body>
+<script src="script.js"></script>
+</html>

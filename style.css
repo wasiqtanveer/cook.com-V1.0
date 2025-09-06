@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: jetbrains mono;
+  color: white;
+}
+
+body {
+  background-image: url(https://muffingroup.com/blog/wp-content/uploads/2023/05/rachel-park-hrlvr2ZlUNk-unsplash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40vw;
+}
+
+/* adding styles for the search area */
+form {
+  display: flex;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.329);
+  border-radius: 10em;
+  gap: 0.8em;
+  align-items: center;
+  margin:  auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 85%;
+
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+form input {
+  border: none;
+  background-color: rgba(44, 37, 37, 0);
+  margin: 0.1em;
+  font-size: 1em;
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: all 1s ease-in-out;
+  color: white;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Applying styles to #wrapper */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.144);
+  border-radius: 10px;
+  height: fit-content;
+  
+
+  /* gives glass effect to the background */
+  backdrop-filter: blur(9px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+
+img {
+  width: 10em;
+  border-radius: 20px;
+  margin: 1em;
+}
+
+/* styling category */
+.cat {
+  display: flex;
+  align-items: center;
+}
+
+/* allow to instructions to break gracefully
+ */
+.result {
+  width: 100%;
+  max-width: 500px; /* or whatever fits your design */
+  box-sizing: border-box;
+  word-break: break-word; /* ensures long words break nicely */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.result.hidden {
+
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+/* styling instructions */
+#instructions {
+  max-height: 170px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 0.5em 1em;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+
+main, #main-content, #wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+
+@media (max-width: 768px) {
+  #main-content {
+    width: 95%;
+  }
+  form {
+    width: 100%;
+  }
+  form input {
+    font-size: 1em;
+  }
+  #instructions {
+    max-height: 250px; /* more room on mobile */
+  }
+}
